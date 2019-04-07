@@ -1,0 +1,6 @@
+#!/bin/bash
+cd $(dirname $0)
+x=$(basename $(dirname $0))
+swift build -c release
+cd .build/release
+cp $x "/usr/local/bin/$x"
